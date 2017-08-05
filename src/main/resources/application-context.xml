@@ -4,4 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+<!-- 	<bean id="beanA" class="com.hTools.spring.BeanA"> -->
+<!-- 		<constructor-arg value="Jackie" index="1" /> -->
+<!-- 		<constructor-arg value="Chan" index="0" /> -->
+<!-- 	</bean> -->	
+ 
+<!-- 	Constructor overloaded specify type  -->
+		<bean id="beanA" class="com.hTools.spring.BeanA">
+			<constructor-arg value="23" type="int"/>
+		</bean> 
+	
+	
 </beans>
