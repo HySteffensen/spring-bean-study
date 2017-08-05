@@ -9,9 +9,7 @@
 	<bean id="beanB" class="com.hTools.spring.BeanB"/>
 
 	<bean id="beanA" class="com.hTools.spring.BeanA">
-		<constructor-arg type="com.hTools.spring.BeanB">
-			<ref bean="beanB" />
-		</constructor-arg>
+		<constructor-arg type="com.hTools.spring.BeanB" ref="beanB" />
 	</bean>		
 	
 </beans>
