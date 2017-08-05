@@ -5,8 +5,9 @@
 
 
 	<bean id="beanA" class="com.hTools.spring.BeanA">
-		<constructor-arg value="Jackie" index="1" />
-		<constructor-arg value="Chan" index="0" />
+		<constructor-arg type="com.hTools.spring.BeanB">
+			<bean class="com.hTools.spring.BeanB"/>
+		</constructor-arg>
 	</bean>		
 	
 </beans>

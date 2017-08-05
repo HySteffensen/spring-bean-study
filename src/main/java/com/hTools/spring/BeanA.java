@@ -2,8 +2,9 @@ package com.hTools.spring;
 
 public class BeanA {
 	
-	public BeanA(String value, String value2) {
-		System.out.println(value);
-		System.out.println(value2);
+	public BeanA(BeanB beanB) {
+		System.out.println("In the Object constructor");
+		beanB.execute();
+		
 	}
 }
