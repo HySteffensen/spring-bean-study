@@ -3,10 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<!-- Bean is now located outside the constructor argument and is available 
+	in another area in our configuration -->
+	
+	<bean id="beanB" class="com.hTools.spring.BeanB"/>
 
 	<bean id="beanA" class="com.hTools.spring.BeanA">
 		<constructor-arg type="com.hTools.spring.BeanB">
-			<bean class="com.hTools.spring.BeanB"/>
+			<ref bean="beanB" />
 		</constructor-arg>
 	</bean>		
 	
