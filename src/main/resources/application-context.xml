@@ -9,7 +9,7 @@
 	<bean id="beanB" class="com.hTools.spring.BeanB"/>
 
 	<bean id="beanA" class="com.hTools.spring.BeanA">
-		<!-- beanB is now referred to by name rather than by type -->
+		<!-- beanB is now referred to by local name inside BeanA's constructor rather than by type -->
 		<constructor-arg name="beanBLocal" ref="beanB" />
 	</bean>		
 	
