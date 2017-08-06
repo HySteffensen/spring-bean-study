@@ -4,7 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean class="com.hTools.spring.BeanA">
+		<!-- Here spring uses intellisense conversion service to convert 23 to type int as found in BeanB -->
 		<property name="age" value="23"/>
+		<property name="beanb">
+			<bean class="com.hTools.spring.BeanB" />	
+		</property>
 	</bean>	
 	
 </beans>
