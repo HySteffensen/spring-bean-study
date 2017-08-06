@@ -2,9 +2,12 @@ package com.hTools.spring;
 
 public class BeanA {
 	
-	public BeanA(BeanB beanBLocal) {
-		System.out.println("In the Object constructor");
-		beanBLocal.execute();
-		
+	private int age;
+
+	public void setAge(int age) {
+		System.out.println("Setting the age value using the setter");
+		this.age = age;
 	}
+	
+	
 }

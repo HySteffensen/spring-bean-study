@@ -3,14 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- Bean is now located outside the constructor argument and is available 
-	in another area in our configuration -->
-	
-	<bean id="beanB" class="com.hTools.spring.BeanB"/>
-
-	<bean id="beanA" class="com.hTools.spring.BeanA">
-		<!-- beanB is now referred to by local name inside BeanA's constructor rather than by type -->
-		<constructor-arg name="beanBLocal" ref="beanB" />
-	</bean>		
+	<bean class="com.hTools.spring.BeanA">
+		<property name="age" value="23"/>
+	</bean>	
 	
 </beans>
