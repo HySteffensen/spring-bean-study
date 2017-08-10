@@ -1,6 +1,7 @@
 package com.hTools.spring;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Application {
@@ -9,6 +10,7 @@ public class Application {
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
 		BeanA beanA = context.getBean(BeanA.class);
 		beanA.getBeanb().execute();
+		((ConfigurableApplicationContext)context).close();
 	}
 
 }

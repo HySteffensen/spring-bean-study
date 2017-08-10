@@ -14,3 +14,10 @@
 # Maven
 log/
 target/
+
+# bin files
+bin/
+target/
+
+# Dolphin
+.directory
